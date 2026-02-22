@@ -38,6 +38,67 @@
         Job Application Tracker
       </h1>
 
+      <!-- Header Calculation Part -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <p class="text-gray-400 font-semibold text-sm">Total</p>
+          <h2 id="total-count" class="text-4xl font-bold text-black mt-2">8</h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <p class="text-gray-400 font-semibold text-sm">Interview</p>
+          <h2
+            id="interview-count"
+            class="text-4xl font-bold text-[#10b981] mt-2"
+          >
+            0
+          </h2>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+          <p class="text-gray-400 font-semibold text-sm">Rejected</p>
+          <h2
+            id="rejected-count"
+            class="text-4xl font-bold text-[#ef4444] mt-2"
+          >
+            0
+          </h2>
+        </div>
+      </div>
+
+      <!-- Filter Title -->
+      <div
+        class="flex justify-between items-baseline mb-6 border-b pb-2 border-gray-200"
+      >
+        <h3 class="text-xl font-bold text-gray-800">Available Jobs</h3>
+        <span class="text-sm font-semibold text-gray-500"
+          ><span id="job-total-text">8</span> jobs</span
+        >
+      </div>
+      
+      <!-- Filter Buttons -->
+      <div class="flex gap-2 mb-8">
+        <button
+          id="btn-all"
+          onclick="showAll()"
+          class="px-5 py-1.5 bg-[#3b82f6] text-white rounded text-sm font-medium"
+        >
+          All
+        </button>
+        <button
+          id="btn-int"
+          onclick="showInterviews()"
+          class="px-5 py-1.5 bg-white border border-gray-200 text-gray-500 rounded text-sm font-medium hover:bg-gray-50"
+        >
+          Interview
+        </button>
+        <button
+          id="btn-rej"
+          onclick="showRejected()"
+          class="px-5 py-1.5 bg-white border border-gray-200 text-gray-500 rounded text-sm font-medium hover:bg-gray-50"
+        >
+          Rejected
+        </button>
+      </div>
+
       
     </div>
     <!-- Java Script Link  -->
