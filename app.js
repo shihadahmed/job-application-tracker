@@ -117,3 +117,18 @@ function showInterviews() {
   }
   checkEmptyState();
 }
+
+// Filter: Show Rejected
+function showRejected() {
+  updateButtonStyles("btn-rej");
+  const cards = document.querySelectorAll(".job-card");
+  for (let i = 0; i < cards.length; i++) {
+    const status = cards[i].querySelector('[id^="st"]').innerText;
+    if (status === "REJECTED") {
+      cards[i].style.display = "block";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+  checkEmptyState();
+}
